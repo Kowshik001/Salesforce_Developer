@@ -1,0 +1,24 @@
+public class AccountHandler { 
+    public static Account insertNewAccount(String AccountName){
+        Account acct = new Account(Name=AccountName);   
+        try{
+            insert acct;
+        }
+        catch(DMLException e){
+            return Null;
+        }
+        return acct;
+    }
+}
+
+-------------------------------------------------
+
+Click ctrl+E
+
+------------------------------------------------
+
+AccountHandler.insertNewAccount('new test account');
+
+-------------------------------------------------
+
+AccountHandler.insertNewAccount('');
