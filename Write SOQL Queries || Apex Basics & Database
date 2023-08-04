@@ -1,7 +1,6 @@
 public class ContactSearch {
     public static List<Contact> searchForContacts (string a, string b){  
-         List<Contact> contsList = new List<Contact>();
-         contsList = [SELECT Id, Name FROM Contact WHERE Name = :a AND MailingPostalCode = :b];
+         List<Contact> contsList = new List<Contact>{[SELECT Id, Name FROM Contact WHERE Name = :a AND MailingPostalCode = :b]};
          return contsList;
 
     }
